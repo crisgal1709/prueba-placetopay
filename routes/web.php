@@ -25,9 +25,8 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('transacciones/callback', 'TransaccionesController@callback')->name('transacciones.callback');
 	Route::get('transacciones/listado', 'TransaccionesController@listado')->name('transacciones.listado');
 
-	Route::get('error', function(){
-		return view('transacciones.error');
-	});
+	Route::get('transacciones/success', 'TransaccionesController@success')->name('transacciones.success');
+	Route::get('transacciones/error', 'TransaccionesController@error')->name('transacciones.error');
 });
 
 Auth::routes();

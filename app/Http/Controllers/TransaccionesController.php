@@ -137,12 +137,11 @@ class TransaccionesController extends Controller
 	{
         $pay = unserialize(session()->get('pay'));
         $result = app()->client->getTransactionInformation($pay->transactionID);
-        //dd($result);
 
         if ($result->returnCode == 'SUCCESS') {
             $pay->update([
                 'responseReasonText' => $result->responseReasonText,
-                'responseReasonCode' => $request->responseReasonCode,
+                'responseReasonCode' => $result->responseReasonCode,
                 'responseCode' => $result->responseCode,
                 'transactionCycle' => $result->transactionCycle,
             ]);
