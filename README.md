@@ -8,7 +8,7 @@
 
 > Clone o descargue este proyecto.
 
-Luego, instale las dependencias a travez de Composer
+Luego, instale las dependencias a través de Composer
 
 -> composer install
 
