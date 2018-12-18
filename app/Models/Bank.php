@@ -14,6 +14,11 @@ class Bank extends Model
 	 */
 	protected $table = 'banks';
 
+	/**
+	 * @var array
+	 */
+	protected $fillable = ['bankCode', 'bankName'];
+
     public static function getBanks()
     {
 
